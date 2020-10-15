@@ -39,7 +39,7 @@ License: You must have a valid license purchased only from templatemonster to le
 									<a class="d-flex auth-brand align-items-center justify-content-center  mb-20" href="#">
 										<img class="brand-img d-inline-block mr-5" src="dist/img/logo.png" alt="brand"/><span class="text-dark font-23">Deepor</span>
 									</a>
-									<form method="POST" action="<?php $_SERVER['DOCUMENT_ROOT']?>/dashboard.php">
+									<form method="POST" action="<?php $_SERVER['DOCUMENT_ROOT']?>/pg/dashboard.php">
 										<h1 class="display-4 text-center mb-10">방문해주셔서 감사합니다.</h1>
 										<p class="text-center mb-30">Thank you for Comming</p>
 										<div class="form-group">
@@ -92,7 +92,7 @@ License: You must have a valid license purchased only from templatemonster to le
 
     <script>
       $("#navbarCollapseAlt .nav-item .nav-link").show();
-      $('#navbarCollapseAlt.collapse').collapse('show');	   
+      $('#navbarCollapseAlt.collapse').collapse('show');
     </script>
 	</body>
 </html>

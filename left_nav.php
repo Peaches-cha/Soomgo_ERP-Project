@@ -5,12 +5,12 @@
    <div class="nicescroll-bar">
       <div class="navbar-nav-wrap">
          <ul class="navbar-nav flex-column">
-            <li class="nav-item">
-               <a class="nav-link" href="javascript:void(0);" data-toggle="collapse" data-target="#app_drp">
-               <i class="ion ion-ios-apps"></i>
-               <span class="nav-link-text">발주요청</span>
-               </a>
-            </li>
+             <li class="nav-item">
+                 <a class="nav-link" href="documentation.html">
+                     <i class="ion ion-ios-apps"></i>
+                     <span class="nav-link-text">발주요청</span>
+                 </a>
+             </li>
             <li class="nav-item">
                <a class="nav-link" href="javascript:void(0);" data-toggle="collapse" data-target="#product_drp">
                <i class="ion ion-ios-copy"></i>
@@ -48,7 +48,7 @@
                                        <a class="nav-link" href="signup.html">거래처 조회</a>
                                     </li>
                                     <li class="nav-item">
-                                       <a class="nav-link" href="signup-simple.html">거래처 변경</a>
+                                       <a class="nav-link" href="signup-simple.html">거래처 등록</a>
                                     </li>
                                  </ul>
                               </li>
