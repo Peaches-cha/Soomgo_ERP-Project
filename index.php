@@ -36,27 +36,25 @@ License: You must have a valid license purchased only from templatemonster to le
 						<div class="col-xl-12 pa-0">
 							<div class="auth-form-wrap pt-xl-0 pt-70">
 								<div class="auth-form w-xl-30 w-lg-55 w-sm-75 w-100">
-									<a class="d-flex auth-brand align-items-center justify-content-center  mb-20" href="#">
-										<img class="brand-img d-inline-block mr-5" src="dist/img/logo.png" alt="brand"/><span class="text-dark font-23">Deepor</span>
+									<a class="d-flex auth-brand align-items-center justify-content-center  mb-20" href="/">
+										<img class="brand-img d-inline-block mr-5" src="<?php $_SERVER['DOCUMENT_ROOT']?>/dist/img/logo.png" alt="brand"/><span class="text-dark font-23">MP ERP</span>
 									</a>
-									<form method="POST" action="<?php $_SERVER['DOCUMENT_ROOT']?>/pg/dashboard.php">
-										<h1 class="display-4 text-center mb-10">방문해주셔서 감사합니다.</h1>
-										<p class="text-center mb-30">Thank you for Comming</p>
+									<form id="signForm" method="POST" action="<?php $_SERVER['DOCUMENT_ROOT']?>/form/form_user/signin.php">
+										<p class="text-center mb-30">Enterprise Resource Planning</p>
 										<div class="form-group">
-											<input class="form-control" placeholder="ID" type="email">
+											<input class="form-control" placeholder="ID" type="text" name="id" requierd minlength="4">
 										</div>
 										<div class="form-group">
 											<div class="input-group">
-												<input class="form-control" placeholder="Password" type="password">
+												<input class="form-control" placeholder="Password" type="password" name="password" required minlength="6">
 												<div class="input-group-append">
 													<span class="input-group-text"><span class="feather-icon"><i data-feather="eye-off"></i></span></span>
 												</div>
 											</div>
 										</div>
 										<button class="btn btn-warning btn-block" type="submit">로그인</button>
-										<p class="font-14 text-center mt-15">비밀번호 찾기</p>
 										<div class="option-sep">or</div>
-										<p class="text-center">아직 회원이 아니신가요? <a href="#">회원가입</a></p>
+										<p class="text-center">아직 회원이 아니신가요? <a href="<?php $_SERVER['DOCUMENT_ROOT']?>/pg/user/signup.php">회원가입</a></p>
 									</form>
 								</div>
 							</div>
@@ -89,10 +87,15 @@ License: You must have a valid license purchased only from templatemonster to le
 
 		<!-- Init JavaScript -->
 		<script src="<?php $_SERVER['DOCUMENT_ROOT']?>/dist/js/init.js"></script>
-
-    <script>
-      $("#navbarCollapseAlt .nav-item .nav-link").show();
-      $('#navbarCollapseAlt.collapse').collapse('show');
-    </script>
 	</body>
+	<script>
+		<?php
+				// 접속된 세션이 있는지 확인
+				if(!isset($_SESSION)) session_start();
+				$id = isset($_SESSION['id']) ? $_SESSION['id'] : false;
+
+				// 있으면 바로 메인페이지로.
+				if($id) echo "location.href=\"/pg/home.php\"";
+		 ?>
+	</script>
 </html>

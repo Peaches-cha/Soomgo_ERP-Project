@@ -5,12 +5,24 @@
    <div class="nicescroll-bar">
       <div class="navbar-nav-wrap">
          <ul class="navbar-nav flex-column">
-             <li class="nav-item">
-                 <a class="nav-link" href="documentation.html">
-                     <i class="ion ion-ios-apps"></i>
-                     <span class="nav-link-text">발주요청</span>
-                 </a>
-             </li>
+            <li class="nav-item">
+               <a class="nav-link" href="javascript:void(0);" data-toggle="collapse" data-target="#order_drp">
+                 <i class="ion ion-ios-apps"></i>
+                 <span class="nav-link-text">발주관리</span>
+               </a>
+               <ul id="order_drp" class="nav flex-column collapse collapse-level-1">
+                  <li class="nav-item">
+                     <ul class="nav flex-column">
+                        <li class="nav-item">
+                           <a class="nav-link" href="<?php $_SERVER['DOCUMENT_ROOT']?>/pg/order/listOrder.php">발주 조회</a>
+                        </li>
+                        <li class="nav-item">
+                           <a class="nav-link" href="<?php $_SERVER['DOCUMENT_ROOT']?>/pg/order/addOrder.php">발주 등록</a>
+                        </li>
+                     </ul>
+                  </li>
+               </ul>
+            </li>
             <li class="nav-item">
                <a class="nav-link" href="javascript:void(0);" data-toggle="collapse" data-target="#product_drp">
                <i class="ion ion-ios-copy"></i>
@@ -20,10 +32,10 @@
                   <li class="nav-item">
                      <ul class="nav flex-column">
                         <li class="nav-item">
-                           <a class="nav-link" href="lock-screen.html">재고 조회</a>
+                           <a class="nav-link" href="<?php $_SERVER['DOCUMENT_ROOT']?>/pg/product/listProduct.php">재고 조회</a>
                         </li>
                         <li class="nav-item">
-                           <a class="nav-link" href="404.html">재고 등록</a>
+                           <a class="nav-link" href="<?php $_SERVER['DOCUMENT_ROOT']?>/pg/product/addProduct.php">재고 등록</a>
                         </li>
                      </ul>
                   </li>
@@ -45,10 +57,10 @@
                               <li class="nav-item">
                                  <ul class="nav flex-column">
                                     <li class="nav-item">
-                                       <a class="nav-link" href="signup.html">거래처 조회</a>
+                                       <a class="nav-link" href="<?php $_SERVER['DOCUMENT_ROOT']?>/pg/account/listAccount.php">거래처 조회</a>
                                     </li>
                                     <li class="nav-item">
-                                       <a class="nav-link" href="signup-simple.html">거래처 등록</a>
+                                       <a class="nav-link" href="<?php $_SERVER['DOCUMENT_ROOT']?>/pg/account/addAccount.php">거래처 등록</a>
                                     </li>
                                  </ul>
                               </li>
@@ -62,10 +74,10 @@
                               <li class="nav-item">
                                  <ul class="nav flex-column">
                                     <li class="nav-item">
-                                       <a class="nav-link" href="signup.html">사원 조회</a>
+                                       <a class="nav-link" href="<?php $_SERVER['DOCUMENT_ROOT']?>/pg/employee/listEmployee.php">사원 조회</a>
                                     </li>
                                     <li class="nav-item">
-                                       <a class="nav-link" href="signup-simple.html">사원 등록</a>
+                                       <a class="nav-link" href="<?php $_SERVER['DOCUMENT_ROOT']?>/pg/employee/addEmployee.php">사원 등록</a>
                                     </li>
                                  </ul>
                               </li>
